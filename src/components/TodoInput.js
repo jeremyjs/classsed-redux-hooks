@@ -1,26 +1,26 @@
-import React, { useState } from 'react';
-import uuid from 'uuid/v4';
-import { addTodo } from '../redux';
-import { useActions } from 'react-redux';
+import React, { useState } from 'react'
+import uuid from 'uuid/v4'
+import { addTodo } from '../redux'
+import { useActions } from 'react-redux'
 
 const TodoInput = (props) => {
-  const [todo, setTodo] = useState('Value');
+  const [todo, setTodo] = useState('Value')
   // Have to give a different name here to avoid a name issue, otherwise `addTodo` is undefined
-  const addTodoAction = useActions(addTodo);
+  const addTodoAction = useActions(addTodo)
 
   const onChange = (event) => {
-    setTodo(event.target.value);
-  };
+    setTodo(event.target.value)
+  }
   const onSubmit = (event) => {
-    event.preventDefault();
-    if (todo.trim() === '') return;
+    event.preventDefault()
+    if (todo.trim() === '') return
     addTodoAction({
       id: uuid(),
       name: todo,
       complete: false
-    });
-    setTodo('');
-  };
+    })
+    setTodo('')
+  }
 
   return (
     <form onSubmit={onSubmit}>
@@ -35,7 +35,7 @@ const TodoInput = (props) => {
         <button type="submit">Add</button>
       </div>
     </form>
-  );
-};
+  )
+}
 
-export default TodoInput;
+export default TodoInput

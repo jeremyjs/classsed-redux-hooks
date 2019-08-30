@@ -1,10 +1,11 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import { store } from './redux';
-import './App.css';
+import React from 'react'
+import { Provider } from 'react-redux'
+import { store } from './redux'
+import './App.css'
+
 // Components
-import TodoInput from './components/TodoInput';
-import TodoList from './components/TodoList';
+import TodoInput from './components/TodoInput'
+import TodoList from './components/TodoList'
 
 const App = () => (
   <Provider store={store}>
@@ -13,6 +14,6 @@ const App = () => (
       <TodoList />
     </div>
   </Provider>
-);
+)
 
-export default App;
+export default App

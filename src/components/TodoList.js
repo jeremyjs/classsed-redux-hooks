@@ -1,29 +1,29 @@
-import React from 'react';
-// import TodoItem from './TodoItem';
-import { useSelector, useActions } from 'react-redux';
-import { toggleTodo, deleteTodo } from '../redux';
+import React from 'react'
+// import TodoItem from './TodoItem'
+import { useSelector, useActions } from 'react-redux'
+import { toggleTodo, deleteTodo } from '../redux'
 
 const TodoList = () => {
-  const todos = useSelector((state) => state.todos);
+  const todos = useSelector((state) => state.todos)
 
   const actions = useActions({toggleTodo, deleteTodo})
 
   // const { toggleTodo, deleteTodo } = useActions({
   //   toggleTodo: (todoId) => toggleTodoComplete(todoId),
   //   deleteTodo: (todoId) => deleteTodoAction(todoId)
-  // });
+  // })
 
   // const [todos, toggleTodo] = useRedux(
   //   (state) => state.todos,
   //   (todoId) => toggleTodoComplete(todoId)
-  // );
+  // )
 
   // const [todos, { toggleTodo, deleteTodo }] = useRedux((state) => state.todos, {
   //   toggleTodo: (todoId) => toggleTodoComplete(todoId),
   //   deleteTodo: (todoId) => deleteTodoAction(todoId)
-  // });
+  // })
 
-  console.log(todos);
+  console.log(todos)
 
   return (
     <ul className="todo-list">
@@ -44,7 +44,7 @@ const TodoList = () => {
         </li>
       ))}
     </ul>
-  );
-};
+  )
+}
 
-export default TodoList;
+export default TodoList
